@@ -10,8 +10,8 @@ def answer(a):
 
 
 if __name__ == "__main__":
-    test_input = ""
-    expected_output = ""
+    test_input = """"""
+    expected_output = """"""
 
     answer_checker = AnswerChecker()
     answer_checker.check(expected_output, answer(test_input))
