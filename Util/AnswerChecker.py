@@ -2,6 +2,7 @@ import logging
 import os
 from pathlib import Path
 
+
 class AnswerChecker:
     def __init__(self):
         logging.basicConfig(format="%(asctime)s.%(msecs)-3d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s",
@@ -55,17 +56,3 @@ class AnswerChecker:
         output_text = function(input_text)
         self.__write_results_to_file(output_text, file_name, output_path)
         self.logger.info(f"Result(s): {output_text}")
-
-
-
-
-
-if __name__ == "__main__":
-    # answer_checker = AnswerChecker()
-    # answer_checker.check("abcdef", "abcdefg")
-
-    # x = os.path.split(os.path.abspath(__file__))
-    print(x)
-
-
-
