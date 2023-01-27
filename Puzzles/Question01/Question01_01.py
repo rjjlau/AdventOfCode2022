@@ -41,7 +41,7 @@ Find the Elf carrying the most Calories. How many total Calories is that Elf car
 """
 
 
-def answer(s):
+def get_max_calories(s):
     return [i for i in [sum([int(c) for c in e.split("\n") if len(c) > 0]) for e in s.split("\n\n")] if i == max([sum([int(c) for c in e.split("\n") if len(c) > 0]) for e in s.split("\n\n")])][0]
 
 
@@ -63,9 +63,9 @@ if __name__ == "__main__":
     expected_output = "24000"
 
     answer_checker = AnswerChecker()
-    answer_checker.check(expected_output, answer(test_input))
+    answer_checker.check(expected_output, get_max_calories(test_input))
 
-    answer_checker.generate_puzzle_output(__file__, answer)
+    answer_checker.generate_puzzle_output(__file__, get_max_calories)
 
 
 
