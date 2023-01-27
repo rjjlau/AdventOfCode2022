@@ -38,7 +38,6 @@ def common_priority_sum(s):
     return sum([ord(list(set(i[:int(len(i)/2)]) & set(i[int(len(i)/2):]))[0]) - 38 if list(set(i[:int(len(i)/2)]) & set(i[int(len(i)/2):]))[0].isupper() else ord(list(set(i[:int(len(i)/2)]) & set(i[int(len(i)/2):]))[0]) - 96 for i in s.split("\n")])
 
 
-
 if __name__ == "__main__":
     test_input = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL

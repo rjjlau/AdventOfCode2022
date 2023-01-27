@@ -32,8 +32,6 @@ def group_priority_sum(s):
     return sum([ord(list(set.intersection(*map(set, s.split("\n")[i-2:i+1])))[0]) - 38 if list(set.intersection(*map(set, s.split("\n")[i-2:i+1])))[0].isupper() else ord(list(set.intersection(*map(set, s.split("\n")[i - 2:i + 1])))[0]) - 96 for i, v in enumerate(s.split("\n")) if (i+1) % 3 == 0])
 
 
-
-
 if __name__ == "__main__":
     test_input = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
