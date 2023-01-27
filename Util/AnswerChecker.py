@@ -15,7 +15,7 @@ class AnswerChecker:
         actual = str(actual)
 
         if expected == actual:
-            self.logger.info("SUCCESS: Actual matches expected")
+            self.logger.info(f"SUCCESS: Actual matches expected -> {actual}")
         else:
             self.logger.error(f"FAILED:\nExpected:\t{expected}\nActual:\t\t{actual}")
             if expected is not None and actual is not None:
@@ -57,4 +57,4 @@ class AnswerChecker:
         output_path = os.path.join(os.path.join(Path(puzzle_path).parent, "Outputs"), day)
         output_text = function(input_text)
         self.__write_results_to_file(output_text, file_name, output_path)
-        self.logger.info(f"Result(s): {output_text}")
+        self.logger.info(f"Answer: {output_text}")
