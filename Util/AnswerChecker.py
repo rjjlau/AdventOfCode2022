@@ -51,8 +51,9 @@ class AnswerChecker:
         file_path, file_name = os.path.split(os.path.abspath(puzzle_file_path))
         file_name = file_name.replace(".py", ".txt")
         input_path = os.path.join(os.path.join(Path(file_path).parent.parent, "Inputs"), file_path.split("\\")[-1])
+        day = str(Path(file_path)).split("\\")[-1]
+        input_text = self.__get_puzzle_input(os.path.join(input_path, day + ".txt"))
         output_path = os.path.join(os.path.join(Path(file_path).parent.parent, "Outputs"), file_path.split("\\")[-1])
-        input_text = self.__get_puzzle_input(os.path.join(input_path, file_name))
         output_text = function(input_text)
         self.__write_results_to_file(output_text, file_name, output_path)
         self.logger.info(f"Result(s): {output_text}")
