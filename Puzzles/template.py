@@ -5,8 +5,8 @@ Question
 """
 
 
-def answer(a):
-    return a
+def answer(s):
+    return s
 
 
 if __name__ == "__main__":
