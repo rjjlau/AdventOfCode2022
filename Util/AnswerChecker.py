@@ -28,7 +28,7 @@ class AnswerChecker:
                     if expected[i] != actual[i]:
                         e2 = f"First difference occurred at position {i}: " \
                              f"{expected[max(0, i-2):i]}>>>{expected[i]}<<<" \
-                             f"{expected[min(len(expected)-1, i+1):min(len(expected)-1, i+2)+1]}"
+                             f"{'' if i == len(expected) - 1 else expected[min(len(expected)-1, i+1):min(len(expected)-1, i+2)+1]}"
                         self.logger.error(e2)
                         raise RuntimeError(e2)
 
