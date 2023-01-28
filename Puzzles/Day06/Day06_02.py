@@ -32,3 +32,4 @@ if __name__ == "__main__":
     answer_checker.check(26, answer("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"))
 
     answer_checker.generate_puzzle_output(__file__, answer)
+    answer_checker.generate_next_day_files(__file__)
