@@ -88,7 +88,7 @@ def answer(s):
             if coord == start_coord:  # sand has come to rest
                 sand_at_rest_coordinates.add(coord)
                 break
-        if count_sand_at_rest == len(sand_at_rest_coordinates):  # sand has started falling perpetually
+        if count_sand_at_rest == len(sand_at_rest_coordinates):  # sand inlet has been blocked
             break
 
     return count_sand_at_rest
